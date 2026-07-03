@@ -1326,40 +1326,40 @@ class RefDocManager:
         layout.addLayout(btn_layout)
 
         dialog.setStyleSheet(f"""
-            QDialog {
+            QDialog {{
                 background-color: {tc("base")};
                 color: {tc("text")};
                 font-family: "Microsoft YaHei";
-            }
-            #mappingWidget {
+            }}
+            #mappingWidget {{
                 background-color: {tc("surface")};
                 border-radius: 10px;
                 border: 1px solid {tc("overlay")};
-            }
-            QComboBox {
+            }}
+            QComboBox {{
                 background-color: {tc("crust")};
                 border: 1px solid {tc("overlay")};
                 border-radius: 6px;
                 padding: 4px 10px;
                 color: {tc("text")};
                 min-width: 130px;
-            }
-            QComboBox:focus {
+            }}
+            QComboBox:focus {{
                 border: 1px solid {tc("accent_blue")};
-            }
-            QComboBox::drop-down {
+            }}
+            QComboBox::drop-down {{
                 border: none;
-            }
-            QComboBox QAbstractItemView {
+            }}
+            QComboBox QAbstractItemView {{
                 background-color: {tc("surface")};
                 border: 1px solid {tc("divider")};
                 color: {tc("text")};
                 selection-background-color: {tc("overlay")};
                 selection-color: {tc("accent_blue")};
-            }
-            QLabel {
+            }}
+            QLabel {{
                 color: {tc("text")};
-            }
+            }}
         """)
 
         result = dialog.exec_()

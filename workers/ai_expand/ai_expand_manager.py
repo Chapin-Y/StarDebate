@@ -661,9 +661,9 @@ class AIExpandManager:
             return
         menu = QMenu(self._mw)
         menu.setStyleSheet(f"""
-            QMenu { background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; }
-            QMenu::item { padding: 6px 24px; }
-            QMenu::item:selected { background-color: {tc("overlay")}; }
+            QMenu {{ background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; }}
+            QMenu::item {{ padding: 6px 24px; }}
+            QMenu::item:selected {{ background-color: {tc("overlay")}; }}
         """)
         action_load = menu.addAction("📋 加载方案")
         action_delete = menu.addAction("🗑 删除文件")

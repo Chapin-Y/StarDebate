@@ -1,0 +1,14 @@
+{
+  "version": "6.4.3",
+  "last_project": "C:/Users/Oblivion/Desktop/辩论赛/MyProject",
+  "theme": "notion_dark",
+  "simplify_tree_names": true,
+  "auto_check_github_update": false,
+  "last_viewed_intro_version": "6.4.3",
+  "developer_mode": true,
+  "disabled_features": [
+    "debug_console"
+  ],
+  "auto_save_on_switch": true,
+  "show_nav_labels": false
+}

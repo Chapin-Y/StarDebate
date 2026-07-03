@@ -830,9 +830,9 @@ class NotesManager:
         """弹出改色菜单"""
         menu = QMenu(self._mw)
         menu.setStyleSheet(f"""
-            QMenu { background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; border-radius: 8px; }
-            QMenu::item { padding: 6px 24px; }
-            QMenu::item:selected { background-color: {tc("overlay")}; }
+            QMenu {{ background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; border-radius: 8px; }}
+            QMenu::item {{ padding: 6px 24px; }}
+            QMenu::item:selected {{ background-color: {tc("overlay")}; }}
         """)
         for ck, chex in NOTE_COLOR_MAP.items():
             color_icon = QPixmap(16, 16)
@@ -1072,9 +1072,9 @@ class NotesManager:
         """便签空白区域右键菜单"""
         menu = QMenu(self._mw)
         menu.setStyleSheet(f"""
-            QMenu { background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; }
-            QMenu::item { padding: 6px 24px; }
-            QMenu::item:selected { background-color: {tc("overlay")}; }
+            QMenu {{ background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; }}
+            QMenu::item {{ padding: 6px 24px; }}
+            QMenu::item:selected {{ background-color: {tc("overlay")}; }}
         """)
         action_add = menu.addAction("\u2795 新建便签")
         action_expand = menu.addAction("全部展开")
@@ -1102,9 +1102,9 @@ class NotesManager:
         """单张卡片右键菜单"""
         menu = QMenu(self._mw)
         menu.setStyleSheet(f"""
-            QMenu { background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; border-radius: 8px; }
-            QMenu::item { padding: 6px 24px; }
-            QMenu::item:selected { background-color: {tc("overlay")}; }
+            QMenu {{ background-color: {tc("base")}; color: {tc("text")}; border: 1px solid {tc("overlay")}; border-radius: 8px; }}
+            QMenu::item {{ padding: 6px 24px; }}
+            QMenu::item:selected {{ background-color: {tc("overlay")}; }}
         """)
         action_pin = menu.addAction("取消置顶" if note["pinned"] else "置顶")
 
