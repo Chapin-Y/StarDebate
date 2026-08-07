@@ -11,6 +11,8 @@
 import os
 import json
 
+from workers.common.robust_json import robust_json_parse
+
 from PyQt5.QtWidgets import (
     QUndoStack,
     QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel,
@@ -440,7 +442,7 @@ class FrameworkManager:
             elif "```" in json_text:
                 json_text = json_text.split("```")[1].split("```")[0].strip()
 
-            data, parse_err = self._mw._robust_json_parse(json_text)
+            data, parse_err = robust_json_parse(json_text)
             if data is None:
                 raise ValueError(parse_err or "无法解析 AI 返回的 JSON 格式")
 

@@ -33,6 +33,7 @@ from components.popup_dialog import CustomDialog
 
 from .ai_expand_worker import AIExpandWorker
 from workers.nav_bar.nav_bar_manager import NavBarManager
+from workers.common.robust_json import robust_json_parse
 
 
 class AIExpandManager:
@@ -454,7 +455,7 @@ class AIExpandManager:
             elif "```" in json_text:
                 json_text = json_text.split("```")[1].split("```")[0].strip()
 
-            data, parse_err = self._robust_json_parse(json_text)
+            data, parse_err = robust_json_parse(json_text, fallback_extractor=self._extract_schemes_array_by_counting)
 
             if data is None:
                 raise ValueError(parse_err or "无法解析 AI 返回的 JSON 格式")

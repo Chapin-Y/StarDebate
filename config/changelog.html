@@ -39,7 +39,15 @@ li:before{content:"\25B8 ";color:ACCENT_COLOR;font-size:12pt}
 <div class="timeline">
 
 <div class="version-node">
-<div class="version-header"><span class="version-tag">v6.4.3</span> <span class="version-badge badge-new">最新</span></div>
+<div class="version-header"><span class="version-tag">v6.4.4</span> <span class="version-badge badge-new">最新</span></div>
+<ul>
+<li style="animation-delay:0s"><span class="version-badge badge-opt">优化</span> 统一 AI 模块 JSON 解析：ai_expand / framework / speech_writer 三个模块中各自重复的 <code>_robust_json_parse</code> 方法替换为 <code>workers/common/robust_json.py</code> 公共函数，消除代码冗余</li>
+<li style="animation-delay:.08s"><span class="version-badge badge-fix">修复</span> speech_writer 编码声明 <code># -*- coding: utf-8 -*-</code> 被 import 语句占位导致位置错误，移至文件首行</li>
+</ul>
+</div>
+
+<div class="version-node">
+<div class="version-header"><span class="version-tag">v6.4.3</span></div>
 <ul>
 <li style="animation-delay:0s"><span class="version-badge badge-fix">修复</span> QMenu/QDialog QSS f-string 转义错误：ai_expand / notes / ref_doc 三处弹出菜单样式中 CSS 花括号未转义（单 <code>{</code> → 双 <code>{{</code>），导致 Python 运行时报 KeyError</li>
 </ul>

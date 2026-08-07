@@ -1,5 +1,5 @@
-from components.theme_colors import tc, refresh
 # -*- coding: utf-8 -*-
+from components.theme_colors import tc, refresh
 """AI写稿管理器 — UI 构建 + 业务逻辑 + 卡片管理
 
 负责：
@@ -343,7 +343,7 @@ class SpeechWriterManager:
             elif "```" in json_text:
                 json_text = json_text.split("```")[1].split("```")[0].strip()
 
-            data, parse_err = mw._robust_json_parse(json_text)
+            data, parse_err = robust_json_parse(json_text)
 
             if data is None:
                 raise ValueError(parse_err or "无法解析 AI 返回的 JSON 格式")
